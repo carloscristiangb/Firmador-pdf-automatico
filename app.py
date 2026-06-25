@@ -69,7 +69,7 @@ if st.button("Procesar y Firmar Documentos"):
                 
                 if firma_insertada:
                     # Añadir al ZIP
-                    zip_file.writestr(f"firmado_{archivo.name}", pdf_bytes)
+                    zip_file.writestr(archivo.name, pdf_bytes)
                 else:
                     st.warning(f"No se encontró la etiqueta 'Nombre:' en: {archivo.name}")
 
